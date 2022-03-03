@@ -19,4 +19,4 @@ jobs:
     runs-on: ubuntu-latest # on peut aussi avoir l'option debian, windows ou macos par exemple
     # on déclare les tâches que notre processus va exécuter
     steps:
-      - run: echo "je fais des tests et ensuite le build"
+      - run: echo "je déploie l'app"
