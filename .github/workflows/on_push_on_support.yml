@@ -21,7 +21,7 @@ jobs:
         run: ls 
     
   build:
-    needs: tests
+    needs: test
     runs-on: ubuntu-latest
     steps:
         - name: je fais le build
