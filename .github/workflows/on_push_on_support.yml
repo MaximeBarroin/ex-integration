@@ -1,0 +1,28 @@
+# titre du workflow
+name: on push on support
+# On indique le déclencheur
+# push
+# pull request
+# merge
+# au push sur branche ...
+# schedule , on , cron , permet de déclencher des routine à ds heres donnée
+on: 
+  push:
+    branches:
+      - support
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name : Récupération du exploration
+        uses: actions/checkout@v3 # on cible ici un repository sur github actions qui s'appelle checkout
+        # ce repository permet d'utiliser certains mots clés https://github.com/actions/checkout
+      - name : "Lister les contenus du dossier de mon test"
+        run: ls 
+    
+  build:
+    needs: tests
+    runs-on: ubuntu-latest
+    steps:
+        - name: je fais le build
+          run: echo "je fais le build"
