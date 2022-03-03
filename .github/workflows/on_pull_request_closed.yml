@@ -9,7 +9,7 @@ name: pull request closed
 on: 
   pull_request:
     types:
-      -closed
+      - closed
     branches:
       - main
 # ensuite on déclare des processus de travail, des routines.  
