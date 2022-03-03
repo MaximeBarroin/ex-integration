@@ -1,21 +1,22 @@
 # titre du workflow
-name: enclenche je fais des tests on push
+name: pull request from dev to main
 # On indique le déclencheur
 # push
 # pull request
 # merge
 # au push sur branche ...
 # schedule , on , cron , permet de déclencher des routine à ds heres donnée
-on: push
-
+on: 
+  pull_request:
+    types:
+      - opened
+    branches:
+      - main
 # ensuite on déclare des processus de travail, des routines.  
 jobs:
   # on donne un nom à notre job
-  test:
+  test2:
     runs-on: ubuntu-latest # on peut aussi avoir l'option debian, windows ou macos par exemple
     # on déclare les tâches que notre processus va exécuter
     steps:
-      - run: echo "je fais des tests"
-
-
-      
+      - run: echo "je fais des tests et ensuite le build"
