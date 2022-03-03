@@ -23,3 +23,5 @@ Créer plusieurs Workflows :
 1 qui se déclenche à la fermeture d'un pull_request  vers la main et qui fait un echo "Je déploi l'app"
 	
 Un qui se déclenche sur la branche support et qui fait deux jobs qui font 3 step que vous souhaitez chacun en récuperrant le repo au préalable.
+
+modif pour test les push on support
